@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: rgb(31, 14, 180);
+    color: white;
+    padding: 16px;
+    margin: 5px;
+    height: 40px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Geologica', sans-serif;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+.gameContainer{
+    /* background-color: yellow; */
+    margin: 90px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.gameInfo h1{
+    font-size: 2rem;
+}
+
+.container{
+    display: grid;
+    margin-right: 15px;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Geologica', sans-serif;
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(221, 214, 228);
+}
+
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    padding: 5px 14px;
+    margin: 0 23px;
+    border: 2px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.infodet{
+    margin: 40px 44px;
+    padding: 10px 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.gameInfo{
+    margin-left: 15px;
+    padding: 20px;
+
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #ff0000;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width:875px){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+
+    }
+    .gameInfo h1{
+        font-size: 2rem;
+    }
+    .container{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);       
+    }
+}
